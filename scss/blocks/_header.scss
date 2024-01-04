@@ -1,0 +1,89 @@
+.header {
+    padding-top: 35px;
+    padding-bottom: 92px;
+    background-image: url(/content/header/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+.header__row {
+    display: flex;
+    align-items: center;
+    column-gap: 185px;
+}
+
+.header__nav-btn {
+    display: none;
+}
+
+.header__row__nav__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 45px;
+    row-gap: 20px;
+    color: $colorWhite;
+    font-size: clamp(1.25rem, 1.159rem + 0.45vw, 1.5rem);
+    font-weight: 400;
+}
+.header__row__nav__list__item {
+    
+}
+
+.header__name {
+    margin-top: 243px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.header__board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 315px;
+}
+
+@include mediaTablet {
+    .header {
+        padding: 20px 0 60px;
+    }
+
+    .header__row {
+        column-gap: 0;
+        justify-content: space-between;
+    }
+
+    .header__nav-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .header__name {
+        margin-top: 180px;
+    }
+
+    .header__board {
+        margin-top: 260px;
+    }
+}
+
+@include mediaPhone {
+    .header {
+        padding: 30px 0 70px;
+    }
+
+    .header__name {
+        margin-top: 120px;
+    }
+
+    .header__board {
+        margin-top: 200px;
+    }
+}

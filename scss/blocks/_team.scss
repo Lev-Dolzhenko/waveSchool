@@ -1,0 +1,58 @@
+.team {
+    padding:200px 0 204px;
+}
+
+.team__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 40px;
+    row-gap: 40px;
+
+
+    margin-top: 212px;
+}
+.team__row__card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    img {
+        margin-bottom: 25px;
+    }
+}
+
+@include mediaTablet {
+    .team {
+        padding: 150px 0 150px;
+    }
+
+    .team__row {
+        flex-wrap: wrap;
+        margin-top: 150px;
+        justify-content: center;
+    }
+
+    .team__row__card {
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@include mediaPhone {
+    .team {
+        padding: 100px 0 100px;
+    }
+
+    .team__row {
+        margin-top: 100px;
+    }
+
+    .team__row__card {
+        img {
+            margin-bottom: 15px;;
+        }
+    }
+}

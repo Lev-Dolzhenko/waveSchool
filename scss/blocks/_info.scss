@@ -1,0 +1,36 @@
+.info {
+    margin-top: 97px;
+}
+
+.info__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.subtitleP {
+}
+
+@include mediaTablet {
+    .info {
+        margin-top: 60px;
+    }
+
+    .info__row {
+        margin-top: 70px;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+}
+
+@include mediaPhone {
+    .info {
+        margin-top: 45px;
+    };
+
+    .info__row {
+        margin-top: 50px;
+        gap: 10px;
+    }
+}
