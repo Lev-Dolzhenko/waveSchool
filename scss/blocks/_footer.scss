@@ -1,0 +1,43 @@
+.footer {
+    background-color: $colorAccent;
+    padding: 68px 0 68px;
+}
+
+.footer__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@include semiTablet {
+    .footer {
+        padding: 50px 0 50px;
+    }
+}
+
+@include mediaTablet {
+    .footer {
+        padding: 40px 0 40px;
+    }
+}
+
+@include mediaPhone {
+    .footer {
+        padding: 30px 0 30px;
+    }
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  footer {
+    flex: 0 0 auto; /* Это зафиксирует footer внизу */
+  }
+  

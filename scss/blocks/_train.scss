@@ -1,0 +1,52 @@
+.train {
+
+}
+
+.train__row {
+    display: flex;
+    align-items: center; /* Центрирование элементов по вертикали */
+  }
+  
+  .train__row__info {
+    width: 50%; /* Ширина блока задается в процентах (может быть отрегулирована) */
+    padding-right: 89px;
+    margin-top: 44px;
+  }
+  
+  .train__image {
+    width: 50%; /* Ширина изображения задается в процентах (может быть отрегулирована) */
+    position: fixed;
+    top: 0;
+    right: 0;
+  }  
+  
+@include semiTablet {
+    .train__row__info {
+        padding-right: 60px;
+        margin-top: 0px;
+    }
+
+}
+
+@include mediaTablet {
+    .train__image {
+        display: none;  
+    }
+
+    .train__row {
+        display: block;
+    }
+
+    .train__row__info {
+        padding-right: 0;
+        margin: 0 auto;
+        width: 100%;
+        // margin-top: 100px;
+    }
+}
+
+@include mediaPhone {
+    .train__row__info {
+        margin-top: 50px;
+    }
+}

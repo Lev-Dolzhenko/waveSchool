@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* BASE */ /* Reset and base styles  */
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,regular,700,300italic,italic);
 @import url(https://fonts.googleapis.com/css?family=Raleway:600,700);
@@ -444,4 +445,105 @@ a:hover {
     margin-bottom: 15px;
   }
 }
+.train__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Центрирование элементов по вертикали */
+}
+
+.train__row__info {
+  width: 50%; /* Ширина блока задается в процентах (может быть отрегулирована) */
+  padding-right: 89px;
+  margin-top: 44px;
+}
+
+.train__image {
+  width: 50%; /* Ширина изображения задается в процентах (может быть отрегулирована) */
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .train__row__info {
+    padding-right: 60px;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .train__image {
+    display: none;
+  }
+  .train__row {
+    display: block;
+  }
+  .train__row__info {
+    padding-right: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .train__row__info {
+    margin-top: 50px;
+  }
+}
+.footer {
+  background-color: #00B2A0;
+  padding: 68px 0 68px;
+}
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    padding: 50px 0 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 40px 0 40px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .footer {
+    padding: 30px 0 30px;
+  }
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; /* Это зафиксирует footer внизу */
+}
+
 /* BLOCK */
