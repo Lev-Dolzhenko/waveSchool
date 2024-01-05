@@ -116,6 +116,9 @@ a:hover {
   padding: 0 20px;
   margin: 0 auto;
 }
+.container--train {
+  height: 100%;
+}
 
 .none {
   display: none !important;
@@ -134,12 +137,41 @@ a:hover {
   font-weight: 600;
   letter-spacing: 0.6px;
   color: #01353E;
+  font-family: "Raleway", serif;
 }
 .titleH2--info {
   text-align: center;
 }
 .titleH2--team {
   text-align: center;
+}
+.titleH2--train {
+  margin-bottom: 100px;
+}
+.titleH2--service {
+  text-align: center;
+}
+
+.titleH3 {
+  font-size: clamp(1.5rem, 1.227rem + 1.36vw, 2.25rem);
+  font-weight: 400;
+  line-height: 40px;
+  color: #01353E;
+}
+.titleH3--service {
+  margin-bottom: 58px;
+  text-align: center;
+}
+.titleH3--service--price {
+  margin-bottom: 0;
+  margin-top: 137px;
+  text-align: center;
+  position: relative;
+}
+.titleH3--service--price span {
+  font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
+  position: absolute;
+  top: 0;
 }
 
 .subtitleP {
@@ -148,6 +180,12 @@ a:hover {
   font-weight: 300;
   line-height: 18px;
   letter-spacing: 0.6px;
+}
+.subtitleP--train {
+  margin-bottom: 30px;
+}
+.subtitleP--train + .subtitleP--train {
+  margin-bottom: 30px;
 }
 
 .subtitleSpan {
@@ -171,6 +209,39 @@ a:hover {
   line-height: 18px;
 }
 
+@media screen and (max-width: 1000px) {
+  .titleH2--train {
+    margin-bottom: 70px;
+  }
+  .titleH3--service {
+    margin-bottom: 40px;
+  }
+  .titleH3--service--price {
+    margin-top: 100px;
+  }
+  .subtitleP--train {
+    margin-bottom: 20px;
+  }
+  .subtitleP--train + .subtitleP--train {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .titleH3--service {
+    margin-bottom: 30px;
+  }
+  .titleH3--service--price {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .titleH3--service {
+    margin-bottom: 20px;
+  }
+  .titleH3--service--price {
+    margin-top: 60px;
+  }
+}
 .nav-icon-btn {
   --time: 0.1s;
   --width: 40px;
@@ -445,7 +516,13 @@ a:hover {
     margin-bottom: 15px;
   }
 }
+.train {
+  position: relative;
+  height: 900px;
+}
+
 .train__row {
+  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -455,15 +532,27 @@ a:hover {
 }
 
 .train__row__info {
-  width: 50%; /* Ширина блока задается в процентах (может быть отрегулирована) */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 60%; /* Ширина блока задается в процентах (может быть отрегулирована) */
   padding-right: 89px;
   margin-top: 44px;
 }
 
 .train__image {
-  width: 50%; /* Ширина изображения задается в процентах (может быть отрегулирована) */
-  position: fixed;
-  top: 0;
+  max-height: 850px;
+  max-width: 40%; /* Ширина изображения задается в процентах (может быть отрегулирована) */
+  position: absolute;
+  top: 25%;
   right: 0;
 }
 
@@ -474,6 +563,9 @@ a:hover {
   }
 }
 @media screen and (max-width: 768px) {
+  .train {
+    height: 650px;
+  }
   .train__image {
     display: none;
   }
@@ -489,6 +581,86 @@ a:hover {
 @media screen and (max-width: 320px) {
   .train__row__info {
     margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .train__image {
+    top: 35%;
+  }
+}
+.service {
+  padding: 200px 0;
+  background-color: #F8F8F8;
+}
+
+.service__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 212px;
+}
+
+.service__row__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
+  row-gap: 30px;
+}
+
+.service__row__cards__card {
+  background-color: #fff;
+  padding: 40px 20px;
+  -webkit-transition: -webkit-box-shadow 0.2s linear;
+  transition: -webkit-box-shadow 0.2s linear;
+  transition: box-shadow 0.2s linear;
+  transition: box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear;
+}
+.service__row__cards__card:hover {
+  -webkit-box-shadow: 0 0 5px #00B2A0;
+          box-shadow: 0 0 5px #00B2A0;
+  cursor: pointer;
+}
+
+.service__row__cards__card__info {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.6px;
+  color: #242121;
+  margin-bottom: 20px;
+}
+.service__row__cards__card__info + .service__row__cards__card__info {
+  margin-bottom: 20px;
+}
+.service__row__cards__card__info:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .service {
+    padding: 150px 0;
+  }
+  .service__row {
+    row-gap: 150px;
+  }
+  .service__row__cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .footer {
