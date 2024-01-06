@@ -1,0 +1,34 @@
+.quote {
+    padding: 80px 0;
+    background-color: $colorSecondaryWhite;
+    text-align: center;
+
+    span {
+        color: #242121;
+        font-family: Roboto Condensed;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 18px;
+        /* 128.571% */
+        letter-spacing: 0.6px;
+    }
+}
+
+.titleH2 {
+    position: relative;
+}
+
+.titleH2--quote {}
+
+@include mediaTablet {
+    .quote {
+        padding: 60px 0;
+    }
+}
+
+@include mediaPhone { 
+    .quote {
+        padding: 40px 0;
+    }
+}

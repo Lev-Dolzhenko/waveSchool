@@ -1,0 +1,72 @@
+.application__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.application__row__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    textarea {
+        resize: none;
+        border-bottom: 2px solid #dadada;
+        height: 100%;
+
+        &::placeholder {
+            color: $colorAccent;
+            max-width: 260px;
+            font-size: clamp(0.75rem, 0.614rem + 0.68vw, 1.125rem);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0.6px;
+        }
+    }
+
+    input {
+        border-bottom: 2px solid #dadada;
+        padding-right: 10px;
+
+        &::placeholder {
+            color: $colorAccent;
+            font-size: clamp(0.75rem, 0.614rem + 0.68vw, 1.125rem);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            /* 100% */
+            letter-spacing: 0.6px;
+        }
+
+    }
+
+}
+
+
+.application__row__info {
+    background-color: $colorSecondaryWhite;
+    display: flex;
+    flex-direction: column;
+    row-gap: 65px;
+    padding: 50px;
+    color: #242121;
+    font-size: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.6px;
+}
+
+@include mediaTablet {
+    .application__row__info {
+        padding: 35px;
+    }
+}
+
+@include mediaPhone {
+    .application__row__info {
+        padding: 25px;
+    }
+}
