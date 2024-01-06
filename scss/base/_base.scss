@@ -64,6 +64,21 @@ a {
     &--service {
         text-align: center;
     }
+
+    &--benefits {
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+    &--slider {
+        text-align: center;
+        margin-bottom: 229px;
+    }
+
+    &--gallery {
+        text-align: center;
+        margin-bottom: 212px;
+    }
 }
 
 .titleH3 {
@@ -92,6 +107,18 @@ a {
 
 }
 
+.titleH5 {
+    color: $colorTitleH2;
+    font-size: clamp(2.5rem, 1.955rem + 2.73vw, 4rem);
+    // font-style: normal;
+    font-weight: 700;
+    // line-height: normal;
+    letter-spacing: 0.6px;
+    &--video {
+        text-align: center;
+    }
+}
+
 .subtitleP {
     color: $colorSubtitleP;
     font-size: clamp(0.75rem, 0.705rem + 0.23vw, 0.875rem);
@@ -104,6 +131,10 @@ a {
         & + & {
             margin-bottom: 30px;
         }
+    }
+
+    &--video {
+        text-align: center;
     }
 }
 
@@ -133,11 +164,58 @@ a {
     }
 }
 
+.block {
+    padding: 200px 0 !important;
+}
+
+.button {
+    display: block;
+    padding: clamp(6px, 2vw, 12px) clamp(12px, 4vw, 24px);
+    font-size: clamp(12px, 2vw, 16px);
+    text-align: center;
+
+    text-decoration: none;
+    border: 1px solid #c4c4c4;
+
+    // border-radius: 5px;
+    color: #333;
+
+    background-color: #fff;
+    color: $colorSubtitleP;
+
+    transition: background-color 0.3s linear;
+
+    &--gallery {
+        margin: 0 auto;
+    }
+}
+
+.button:hover, .button:focus {
+    background-color: $colorAccent;
+    color: $colorWhite;
+}
+
+.button:active {
+    background-color: $colorAccent;
+}
+
 @include semiTablet {
     .titleH2 {
 
         &--train {
             margin-bottom: 70px;
+        }
+
+        &--benefits {
+            margin-bottom: 80px;
+        }
+
+        &--slider {
+            margin-bottom: 180px;
+        }
+
+        &--gallery {
+            margin-bottom: 180px;
         }
     }
 
@@ -162,9 +240,28 @@ a {
             }
         }
     }
+
+    .block {
+        padding: 150px 0 !important;
+    }
 }
 
 @include mediaTablet {
+    .titleH2 { 
+
+        &--benefits {
+            margin-bottom: 60px;
+        }
+
+        &--slider {
+            margin-bottom: 120px;
+        }
+
+        &--gallery {
+            margin-bottom: 140px;
+        }
+    }
+
     .titleH3 {
 
         &--service {
@@ -175,9 +272,24 @@ a {
             margin-top: 80px;
         }
     }
+
+    .block {
+        padding: 100px 0 !important;
+    }
 }  
 
 @include mediaPhone {
+    .titleH2 {
+
+        &--slider {
+            margin-bottom: 100px;
+        }
+
+        &--gallery {
+            margin-bottom: 100px;
+        }
+    }
+
     .titleH3 {
 
         &--service {
@@ -187,5 +299,9 @@ a {
         &--service--price {
             margin-top: 60px;
         }
+    }
+
+    .block {
+        padding: 80px 0  !important;
     }
 }

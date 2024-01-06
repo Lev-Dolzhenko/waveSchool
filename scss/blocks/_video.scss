@@ -1,0 +1,51 @@
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 для видео */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Занимает всю ширину контейнера */
+    height: 100%; /* Занимает всю доступную высоту, основанную на соотношении сторон */
+}
+
+.video__info {
+    margin-top: 200px;
+}
+.video__info__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 100px;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.video__info__list__item {
+    flex: 1; /* Равномерно распределяет доступное пространство между элементами */
+    max-width: 300px; /* Устанавливает максимальную ширину элемента */
+    margin-bottom: 20px; /* Добавляет отступ между элементами */
+}
+
+
+@include semiTablet {
+    .video__info {
+        margin-top: 150px;
+    }
+}
+
+@include mediaTablet {
+    .video__info {
+        margin-top: 100px;
+    }
+}
+
+@include mediaPhone {
+    .video__info {
+        margin-top: 80px;
+    }
+}

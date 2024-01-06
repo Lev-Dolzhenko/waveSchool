@@ -1,0 +1,70 @@
+.benefits {
+    padding: 200px 0;
+}
+
+.benefits__row {
+}
+.benefits__row__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+.benefits__row__list__item {
+    max-width: 350px;
+}
+
+.benefits__row__list__item__wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   column-gap: 10px;
+
+   margin-bottom: 19px;
+}
+
+.benefits__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+
+    margin-top: 100px;
+}
+
+.benefits__stat {
+    align-self: center;
+}
+
+.benefits__stat__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    span {
+        font-size: clamp(1.25rem, 1.159rem + 0.45vw, 1.5rem);
+    }
+}
+
+.benefits__info .subtitleP {
+    margin-bottom: 30px; /* Задаем отступ для всех элементов */
+  }
+  
+  .benefits__info .subtitleP:last-child {
+    margin-bottom: 0; /* Убираем отступ только у первого элемента */
+  }
+
+
+  @include semiTablet {
+
+    .benefits__row__list {
+        justify-content: center;
+    }
+}
+
+@include mediaTablet {
+    .benefits__wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
